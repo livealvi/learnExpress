@@ -11,34 +11,7 @@ app.use(express.urlencoded({
 }));
 app.use(express.json());
 
-// let Schema = mongoose.Schema;
-// let testSchema = new Schema({
-//     name: String
-// });
-
-//let Test = mongoose.model('Test', testSchema);
-
 app.use('/contacts', router);
-
-app.get('/', (req, res) => {
-
-    // let test = new Test({
-    //     name: 'Alvi Hasan'
-    // })
-
-    // test.save()
-    //     .then(t => {
-    //         res.json(t);
-    //     })
-    //     .catch(err => {
-    //         console.log(e);
-    //         res.status(500).json({
-    //             error: 'Error Occurred'
-    //         })
-    //     })
-
-});
-
 
 const PORT = process.env.PORT || 8080
 mongoose
