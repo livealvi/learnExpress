@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+const router = require('./routes');
 
 const app = express();
 
@@ -15,7 +16,9 @@ app.use(express.json());
 //     name: String
 // });
 
-let Test = mongoose.model('Test', testSchema);
+//let Test = mongoose.model('Test', testSchema);
+
+app.use('/contacts', router);
 
 app.get('/', (req, res) => {
 

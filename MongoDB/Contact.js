@@ -1,5 +1,6 @@
 const {
-    Schema
+    Schema,
+    model
 } = require('mongoose');
 
 const contactSchema = new Schema({
@@ -22,4 +23,7 @@ const contactSchema = new Schema({
         minlength: 9,
         maxlength: 15
     }
-})
+});
+
+const Contact = model('Contact', contactSchema);
+module.exports = Contact;
